@@ -1,0 +1,13 @@
+server:
+  port: ${PORT:8888}  # Render sẽ set biến môi trường PORT
+
+spring:
+  profiles:
+    active: native
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configurations
